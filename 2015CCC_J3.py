@@ -1,5 +1,12 @@
 #2021-2-4 14:23
 #2021-2-4 15:03
+'''
+Sample Input 1
+joy
+
+Output for Sample Input 1
+jikoyuz
+'''
 englishlist='abcdefghijklmnopqrstuvwxyz'
 vowellist='aeiou'
 consonantlist='bcdfghjklmnpqrstvwxyz'

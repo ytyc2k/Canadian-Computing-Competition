@@ -1,5 +1,12 @@
 #2021-2-4 14:12
 #2021-2-4 14:22
+'''
+Sample Input 1
+How are you :-) doing :-( today :-)?
+
+Output for Sample Input 1
+happy
+'''
 Happy=':-)'
 Sad=':-('
 # ss='How are you :-) doing :-( today :-)?'

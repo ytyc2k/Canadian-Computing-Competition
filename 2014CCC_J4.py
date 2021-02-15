@@ -1,5 +1,18 @@
 # 2020-2-2 14:36pm
 # 2020-2-2 15:10pm
+'''
+Sample Input
+10
+2
+2
+3
+
+Output for Sample Input
+1
+3
+7
+9
+'''
 K=int(input())
 m=int(input())
 P=list(range(1,K+1))

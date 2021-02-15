@@ -1,5 +1,13 @@
 #2021-2-4 14:05
 #2021-2-4 14:12
+'''
+Sample Input 1
+1
+7
+
+Output for Sample Input 1
+Before
+'''
 CCC_month,CCC_Day=2,18
 month=int(input())
 day=int(input())

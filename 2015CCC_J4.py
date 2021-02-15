@@ -1,5 +1,6 @@
 #2021-2-4 15:04
 '''
+Sample Input 2
 14
 R 12
 W 2
@@ -16,13 +17,11 @@ R 34
 S 12
 S 34
 
-5
-R 2
-R 3
-W 5
-S 2
-S 3
-
+Output for Sample Input 2
+12 13
+23 8
+34 2
+45 -1
 '''
 n=int(input())
 lst=[input().split() for i in range(n)]
