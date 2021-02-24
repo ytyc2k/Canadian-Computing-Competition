@@ -13,15 +13,15 @@
 yes
 '''
 
-# R=int(input())
-# C=int(input())
-# lst=[list(map(int,input().split())) for i in range(R)]
+R=int(input())
+C=int(input())
+lst=[list(map(int,input().split())) for i in range(R)]
 # print(lst)
-R=3
-C=4
-lst=[[3, 10, 8, 14],
-     [1, 11, 12, 12],
-     [6, 2, 3, 9]]
+# R=3
+# C=4
+# lst=[[3, 10, 8, 14],
+#      [1, 11, 12, 12],
+#      [6, 2, 3, 9]]
 
 def f():
     global R,C
@@ -41,9 +41,9 @@ def f():
 stack=[lst[0][0]]
 while stack:
     if f():
-        print('Yes')
+        print('yes')
         break
     # print(stack)
     # print(lst)
 else:
-    print('NO')
+    print('no')
