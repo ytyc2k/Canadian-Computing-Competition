@@ -18,4 +18,6 @@ Ivona
 
 n=int(input())
 lst=[(input(),int(input())) for _ in range(n)]
+# lst=[('Ahmed', 400), ('Suzanne', 500), ('Ivona', 500)]
 print(max(lst,key=lambda x:x[1])[0])
+

@@ -136,23 +136,25 @@ R, C, k = int(input()), int(input()), int(input())
 Rcommand = [False for _ in range(R)]
 Ccommand = [False for _ in range(C)]
 Grid = [[False for _ in range(C)] for _ in range(R)]
-for _ in range(k):
-    x, y = input().split()
-    y = int(y) - 1
-    if x == 'R':
-        Rcommand[y] = not Rcommand[y]
-    else:
-        Ccommand[y] = not Ccommand[y]
-for x in range(R):
-    if Rcommand[x]:
-        for y in range(C):
-            Grid[x][y] = not Grid[x][y]
-for y in range(C):
-    if Ccommand[y]:
-        for x in range(R):
-            Grid[x][y] = not Grid[x][y]
-s = 0
-for x in Grid:
-    s = s + x.count(True)
-print(s)
+for i in Grid:
+    print(i)
+# for _ in range(k):
+#     x, y = input().split()
+#     y = int(y) - 1
+#     if x == 'R':
+#         Rcommand[y] = not Rcommand[y]
+#     else:
+#         Ccommand[y] = not Ccommand[y]
+# for x in range(R):
+#     if Rcommand[x]:
+#         for y in range(C):
+#             Grid[x][y] = not Grid[x][y]
+# for y in range(C):
+#     if Ccommand[y]:
+#         for x in range(R):
+#             Grid[x][y] = not Grid[x][y]
+# s = 0
+# for x in Grid:
+#     s = s + x.count(True)
+# print(s)
 

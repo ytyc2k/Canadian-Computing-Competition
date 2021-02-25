@@ -8,19 +8,22 @@
 # ss = input()
 # ss = 'LMMMS'  # sample input 1  --> 0
 # ss = 'LLSLM'  # sample input 2  --> 2
-ss = 'MSSLSLS'  # sample input 3  --> 3
+ss = 'MSLSLSMLSLM'  # sample input 3  --> 3
 st = sorted(ss)
-# print(list(ss))
-# print(st)
+print(list(ss))
+print(st)
 
 lCount = ss.count('L')
 mCount = ss.count('M')
 L=[ss[i] for i in range(lCount) if ss[i] != st[i]]
 M=[ss[i] for i in range(lCount,lCount+mCount) if ss[i] != st[i]]
 S=[ss[i] for i in range(lCount+mCount,len(ss)) if ss[i] != st[i]]
-# print(L,M,S)
+print(L,M,S)
+
 swap=0
-while len(L)+len(M)+len(S)>3:
+n=len(L) + len(M) + len(S)
+while n>3:
+    n=len(L) + len(M) + len(S)
     if 'S' in L and 'L' in S:
         L.remove('S')
         S.remove('L')
@@ -33,14 +36,21 @@ while len(L)+len(M)+len(S)>3:
         M.remove('S')
         S.remove('M')
         swap += 1
-swap+=(len(L)+len(M)+len(S))/3*2
-# print(L,M,S)
+    print(n)
+
+
+print(swap)
+print(L,M,S)
+
+swap=swap+(len(L)+len(M)+len(S))/3*2
+print(swap)
 print(int(swap))
 
 
 
+# lCount = ss.count('L')
+# mCount = ss.count('M')
 # print(lCount, mCount)
-
 #
 # section1Ems = ss[:lCount].count('M')
 # section1Esses = ss[:lCount].count('S')
@@ -106,3 +116,4 @@ print(int(swap))
 #
 # swaps += (section1Esses + section1Ems + section2Esses + section2Els + section3Els + section3Ems) / 3 * 2
 # print(int(swaps))
+
