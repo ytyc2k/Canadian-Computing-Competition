@@ -11,14 +11,6 @@
 # ss = 'MSSLSLS'  # sample input 3  --> 3
 
 ss = input()
-# st = sorted(ss)
-# lst = [ss[i] for i in range(len(ss)) if ss[i] != st[i]]
-# print(lst)
-# n = len(lst)
-# if n % 2:
-#     print((n + 1) // 2)
-# else:
-#     print(n // 2)
 
 lCount = ss.count('L')
 mCount = ss.count('M')
@@ -46,7 +38,6 @@ for i in range(lCount + mCount, len(ss)):
         section3Ems += 1
 
 # print(section1Esses, section1Ems, section2Esses, section2Els, section3Els, section3Ems)
-
 
 swaps = 0
 
