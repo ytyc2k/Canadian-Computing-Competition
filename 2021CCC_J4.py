@@ -7,35 +7,45 @@
 ###########################################
 ss = input()
 # ss = 'LMMMS'  # sample input 1  --> 0
-# ss = 'LLSLM'  # sample input 2  --> 2
-# ss = 'MSLSLSMLSLM'  # sample input 3  --> 3
-# ss='MSLLLLSLMLLMSSLMMMMSSSMSSSSMSSMMMMSSSMMSSMSLLMMLSMSLMMSLLMSSMMLMMSSMLLSSLMLMLMMSSLLLLSLLMLSMSMLMMMMSSMMSSSMMLMLLMMSLLLMSSLSLMSLLMSSLMSLMMMMMMSMMLMSLSSSMSLLLLMLMLLSSMSMLLSMLLLLMLLMSLSMMMLSMMMLSLLMSSMSLSSMLLSLMMSMSSLSMMMMLMLMMLSSSSSSLLMSMLSSSMMLLMMLSLLLLSSLLMMLSSMLLLLLMSSLMMMSLLLSLSMMLMLLLMMSSLMSSLMSMMMLSLMLMMLSLSMLMSMSMSMMMLSLMLSLLSMSSSMMLMLMLSSMLMSSMMSMMSSMLSSSSMSMLMLSMMLSMMSMLSMSLMMSLLMSLSLLLSMLSSLLSSLLSMMLSMSSMMLSSLMMLMLMMLMSMMMMSMSMSMMLLLMSSMLLMMSSSMLSSSLSSMMMSLLLSSMMSLMMSLMMSLSLMLSMMSSLMSMSLMMLMMSSSSLLSSMSMSLLSLMMSMLMLLLSSLSSLSSLLSMLLSLSMMSLSMLMSLMMMMLSLSMLMLSSSMSMSLMSLSLSSMSLSSMSSSLSSLMMLLSSLLSLSMMMMMLSSSMLMMMSSLMLMSSLMSLSSSSSMLSSMSSLLLLLLLMMLLLMLSMMLLSLSLMMSSLSLMMMSLSLLLMLMMMLSLMSMSMLMLSSSSSLSSSSLMMMSSSLMLLSMLSSSMLLMLMSLLMMMMSMLLSMSLMLSLLSMSSLLMMLLMLSMLLSLSLSSLSMSLMLSSLSLMMMLSLLSLSLLMSMLMLSSLMMLMLMSLMLLMMSMMLMLMMMMSLLMSSMLSMMSLLSSMLSMLMSLLMLMSMSMMSMSMSLLMSSLSMMMLMLLMSMMMMLLLSMLLSMSLLSSLMSSSMSMMSLLSLLSMSMLSMSMLLLMMLMSMSSSLSLMSMMLLSMLLSMMMLMSLLMMSMMLLLLMSSSMMLLSMSLSMMLMMLLLMSMLMLLS'
+# ss = 'SSLML'  # sample input 2  --> 2
 st = sorted(ss)
 # print(list(ss))
 # print(st)
 
 lCount = ss.count('L')
 mCount = ss.count('M')
-L=[ss[i] for i in range(lCount) if ss[i] != st[i]]
-M=[ss[i] for i in range(lCount,lCount+mCount) if ss[i] != st[i]]
-S=[ss[i] for i in range(lCount+mCount,len(ss)) if ss[i] != st[i]]
-# print(L,M,S)
-n=1
-swap=0
-while swap!=n:
-    n=swap
-    if 'S' in L and 'L' in S:
-        L.remove('S')
-        S.remove('L')
-        swap += 1
-    if 'M' in L and 'L' in M:
-        L.remove('M')
-        M.remove('L')
-        swap += 1
-    if 'S' in M and 'M' in S:
-        M.remove('S')
-        S.remove('M')
-        swap += 1
+L = [ss[i] for i in range(lCount) if ss[i] != st[i]]
+M = [ss[i] for i in range(lCount, lCount + mCount) if ss[i] != st[i]]
+S = [ss[i] for i in range(lCount + mCount, len(ss)) if ss[i] != st[i]]
+# print(L, M, S)
 
-swap=swap+(len(L)+len(M)+len(S))/3*2
+swap = a = b = c = 0
+Lm = L.count('M')
+Ls = L.count('S')
+Ms = M.count('S')
+Ml = M.count('L')
+Sl = S.count('L')
+Sm = S.count('M')
+# print(Lm, Ls, Ms, Ml, Sl, Sm)
+if Ls and Sl:
+    a = Ls if Ls <= Sl else Sl
+    swap += a
+    Ls -= a
+    Sl -= a
+# print(Lm, Ls, Ms, Ml, Sl, Sm)
+if Lm and Ml:
+    b = Lm if Lm <= Ml else Ml
+    swap += b
+    Lm -= b
+    Ml -= b
+# print(Lm, Ls, Ms, Ml, Sl, Sm)
+if Ms and Sm:
+    c = Ms if Ms <= Sm else Sm
+    swap += c
+    Ms -= c
+    Sm -= c
+# print(Lm, Ls, Ms, Ml, Sl, Sm)
+# print(swap)
+
+swap += (Lm + Ls + Ms + Ml + Sl + Sm) / 3 * 2
 print(int(swap))

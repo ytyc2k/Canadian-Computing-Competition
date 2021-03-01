@@ -32,8 +32,6 @@ for k, n in enumerate(range(Min, Scope), start=Min):
             s += y * (x - k - z)
         elif x + z < k:
             s += y * (k - x - z)
-        if k == 9:
-            print(s, k, x, y, z)
     R.append((s, k))
     # print(k,x,y,z,s)
 print(min(R)[0])

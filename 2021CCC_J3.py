@@ -9,7 +9,7 @@
 # '''
 # Sample Input
 '''
-56234
+57234
 00907
 34100
 99999
@@ -25,29 +25,9 @@ while True:
     if ss=='99999':
         break
     he=int(ss[0])+int(ss[1])
-    if he==0:
-        print(pre+ss[2:])
-    elif he%2==0:
-        print('right '+ss[2:])
+    if he!=0 and he%2==0:
         pre='right '
     elif he%2==1:
-        print('left '+ss[2:])
         pre='left '
-
-# pre = ''
-# while True:
-#     ss = input()
-#     if ss == '99999':
-#         break
-#     he = int(ss[0]) + int(ss[1])
-#     if  he == 0:
-#         print(pre, ss[2:])
-#     elif he % 2 == 0:
-#         print('right', ss[2:])
-#         pre = 'right'
-#     elif he % 2 == 1:
-#         print('left', ss[2:5])
-#         pre = 'left'
-#
-# ss='562344564654654654564655'
-# print(ss[:-1])
+    print(pre+ss[2:])
+        

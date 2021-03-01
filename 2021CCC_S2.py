@@ -1,6 +1,6 @@
 ###########################################
 # Canadian Computing Conpetition ( CCC )  #
-# 2021 Junior J5                          #
+# 2021 Senior S2                          #
 # Modern Art                              #
 # Author : Tony Yang                      #
 # 2021-02-17                              #
