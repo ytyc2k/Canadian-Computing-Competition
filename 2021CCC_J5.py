@@ -42,3 +42,4 @@ for x in Canvas:
     s = s + x.count(True)
 print(s)
 
+print(sum(i.count(1) for i in Canvas))
